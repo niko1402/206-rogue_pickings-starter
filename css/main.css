@@ -66,6 +66,7 @@ header h1 span {
 
 header nav {
 	padding: 20px 0;
+	width: 100%;
 }
 
 header nav ul {
@@ -77,7 +78,8 @@ header nav ul li {
 	font-weight: 700;
 	font-size: 0.875em;
 	padding: 10px 10px;
-	display: flex;
+	text-align: center;
+	list-style-type: none;
 }
 
 header nav ul li a{
@@ -139,6 +141,7 @@ header nav ul li a{
 
 .section-two h3,
 .section-three h3 {
+	padding: 10px 0px;
 }
 
 .menu {
@@ -169,7 +172,9 @@ footer {
 	border-top: 3px solid #eee;
 	margin: 0 auto;
 	text-align: center;
+	width: 100%;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
