@@ -45,7 +45,7 @@ p {
 header {
 	border-bottom: 3px solid #77a466;
 	display:flex;
-	flex-flow: column;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -83,9 +83,10 @@ header nav ul li a{
 
 /***** Top and bottom section styles *****/
 
-.top-section {
+.top-section,
+.bottom-section {
 	display:flex;
-	flex-flow: wrap;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	width: auto;
@@ -104,22 +105,13 @@ header nav ul li a{
 	font-size: 1em;
 	line-height: 25px;
 }
-.bottom-section {
-	display:flex;
-	flex-flow: column;
-	justify-content: center;
-	align-items: flex-start;
-	width: auto;
-}
 .section-one,
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
 	width: 100%;
 }
-.section-one h3 {
-	padding: 10px 0px;
-}
+.section-one h3,
 .section-two h3,
 .section-three h3 {
 	padding: 10px 0px;
@@ -135,17 +127,18 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.3125em;
 }
 .address {
 	font-size: 1em;
-	line-height: 24px;
+	line-height: 1.5em;
 }
 
 /***** Footer styles *****/
 
 footer {
 	display:flex;
+	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	border-top: 3px solid #eee;
@@ -167,7 +160,7 @@ footer span {
 		display:flex;
 		flex-flow: row;
 		flex-basis: auto;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: flex-start;
 		border-top: 1px solid #eee;
 		width: auto;
@@ -175,22 +168,15 @@ footer span {
 	.section-one,
 	.section-two,
 	.section-three {
-	width: 33%;
+	flex-basis: 30%;
 	justify-content: center;
 	align-items: center;
-	}
-	.section-one h3,
-	.section-two h3,
-	.section-three h3 {
-	padding: 10px 0px;
+	border-top: none;
 	}
 
 	.section-two {
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
-		padding: 0px 20px;
-	}
-	.section-three {
 		padding: 0px 20px;
 	}
 }
@@ -199,27 +185,21 @@ footer span {
 
 @media all and (min-width: 1200px) {
 	header {
-		display: flex;
-		flex-flow: row;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
-		width: 100%;
 	}
 	header h1 {
-		width: 60%;
-		padding: 38px 0 20px 0;
+		width: 40%;
+		padding: 0;
 		border-bottom: none;
-		text-align:left;
+		text-align: left;
 	}
 	header nav {
-		padding-top: 38px;
-		padding-right: 10px;
 		width: 40%;
+		padding-right: 20px;
 	}
 	header nav ul {
-		display:flex;
-		flex-flow: row;
-		justify-content: center;
-		text-align: left;
+		display: flex;
+		justify-content: space-between;
 	}
 }
