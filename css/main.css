@@ -17,7 +17,7 @@ body {
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: wrap;
+	flex-flow: row wrap;
 	max-width: 1200px;
 	width: 90%;
 }
@@ -130,13 +130,11 @@ header nav ul li a{
 .section-two,
 .section-three {
 	border-top: 1px solid #eee;
+	width: 100%;
 }
 
 .section-one h3 {
 	padding: 10px 0px;
-}
-
-.section-two {
 }
 
 .section-two h3,
@@ -189,12 +187,12 @@ footer span {
 		flex-basis: auto;
 		justify-content: center;
 		align-items: flex-start;
+		border-top: 1px solid #eee;
 		width: auto;
 }
 	.section-one,
 	.section-two,
 	.section-three {
-	border-top: 1px solid #eee;
 	width: 33%;
 	justify-content: center;
 	align-items: center;
@@ -217,5 +215,27 @@ footer span {
 
 /***** Desktop styles *****/
 @media all and (min-width: 1200px) {
-
+	header {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+	}
+	header h1 {
+		width: 60%;
+		padding: 38px 0 20px 0;
+		border-bottom: none;
+		text-align:left;
+	}
+	header nav {
+		padding-top: 38px;
+		width: 40%;
+	}
+	header nav ul {
+		display:flex;
+		flex-flow: row;
+		justify-content: center;
+		text-align: left;
+	}
 }
