@@ -1,3 +1,5 @@
+/***** Mobile first styling *****/
+
 html {
 	font-size: 16px;
 }
@@ -42,7 +44,6 @@ p {
 	line-height: 21px;
 }
 
-/*The widths are in a percentage!*/
 header {
 	border-bottom: 3px solid #77a466;
 	display:flex;
@@ -87,7 +88,6 @@ header nav ul li a{
 	color:#77a466;
 }
 
-/*The widths are in a percentage!*/
 .top-section {
 	display:flex;
 	flex-flow: wrap;
@@ -164,7 +164,6 @@ header nav ul li a{
 	line-height: 24px;
 }
 
-/*The widths are in a percentage!*/
 footer {
 	display:flex;
 	justify-content: center;
@@ -180,4 +179,43 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/***** Tablet styles *****/
+@media all and (min-width: 768px) {
+	.bottom-section {
+		display:flex;
+		flex-flow: row;
+		flex-basis: auto;
+		justify-content: center;
+		align-items: flex-start;
+		width: auto;
+}
+	.section-one,
+	.section-two,
+	.section-three {
+	border-top: 1px solid #eee;
+	width: 33%;
+	justify-content: center;
+	align-items: center;
+}
+	.section-one h3,
+	.section-two h3,
+	.section-three h3 {
+	padding: 10px 0px;
+}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0px 20px;
+}
+	.section-three {
+		padding: 0px 20px;
+	}
+}
+
+/***** Desktop styles *****/
+@media all and (min-width: 1200px) {
+
 }
